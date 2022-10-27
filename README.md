@@ -24,10 +24,10 @@ Users should be able to:
 
 ### Screenshot
 
-Desktop:
+- Desktop:
 ![](./images/Frontend%20Mentor%20Clipboard%20landing%20page%20desktop.png)
 
-Mobile:
+- Mobile:
 ![](./images/Frontend%20Mentor%20Clipboard%20landing%20page%20mobile.png)
 
 ### Links
