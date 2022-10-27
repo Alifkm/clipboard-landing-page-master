@@ -1,0 +1,465 @@
+.container {
+  @include width(85%, 1200px);
+  margin-inline: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.paragraph {
+  @include width(90%, 650px);
+  font-size: 0.85rem;
+  line-height: 1.75;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.button {
+  @extend .button;
+  @include width(90%, 400px);
+}
+
+// ----------------------------------
+// Header
+// ----------------------------------
+
+.header {
+  @include flexProperty(column, nowrap, center, center);
+
+  #{&}__logo {
+    width: 100px;
+    margin-bottom: 3em;
+  }
+
+  #{&}__title {
+    font-size: 1.75rem;
+  }
+}
+
+
+
+// ----------------------------------
+// First Section
+// ----------------------------------
+
+.section1 {
+  margin-bottom: 10em;
+
+  #{&}__paragraph {
+    margin-bottom: 3em;
+  }
+}
+
+.section1-content {
+  #{&}__image {
+    margin-bottom: 3em;
+  }
+}
+
+.section1-inner-content {
+  #{&}__title {
+    margin-bottom: 0.5em;
+  }
+
+  #{&}__paragraph {
+    margin-bottom: 3em;
+    line-height: 1.5;
+  }
+}
+
+
+
+// ----------------------------------
+// Second Section
+// ----------------------------------
+
+.section2 {
+  margin-bottom: 5em;
+  
+  #{&}__paragraph {
+    margin-bottom: 3em;
+  }
+}
+
+
+
+// ----------------------------------
+// Third Section
+// ----------------------------------
+
+.section3 {
+  margin-bottom: 5em;
+
+  #{&}__paragraph {
+    margin-inline: auto;
+    margin-bottom: 5em;
+  }
+}
+
+.section3-inner-content {
+  @include flexProperty(column, nowrap, center, center);
+
+  #{&}__image {
+    width: 50px;
+    margin-bottom: 2em;
+  }
+
+  #{&}__title {
+    margin-bottom: 1em;
+  }
+
+  #{&}__paragraph {
+    margin-bottom: 5em;
+    line-height: 1.5;
+  }
+}
+
+
+
+// ----------------------------------
+// Fourth Section
+// ----------------------------------
+
+.section4 {
+  margin-bottom: 5em;
+}
+
+.section4-content {
+  @include flexProperty(column, nowrap, center, center);
+
+  #{&}__image {
+    width: 150px;
+    margin-bottom: 5em;
+  }
+}
+
+
+
+// ----------------------------------
+// Fifth Section
+// ----------------------------------
+.section5 {
+  @include flexProperty(column, nowrap, center, center);
+  margin-bottom: 8em;
+
+  #{&}__paragraph {
+    margin-bottom: 1em;
+  }
+}
+
+
+
+// ----------------------------------
+// Footer
+// ----------------------------------
+.footer {
+  @include flexProperty(column, nowrap, center, center);
+  padding: 3em 0;
+
+  #{&}__logo {
+    width: 50px;
+    margin-bottom: 2em;
+  }
+}
+
+.footer-content {
+
+  #{&}__text {
+    color: lighten($dark-grayish-blue, 25%);
+    margin-bottom: 1.5em; 
+  }
+}
+
+.footer-icon {
+  @include flexProperty(row, nowrap, center, center);
+  margin-top: 1em;
+
+  #{&}__image {
+    width: 20px;
+  }
+
+  #{&}__image + #{&}__image {
+    margin-left: 2em;
+  }
+}
+
+.attribution {
+  padding-bottom: 1em;
+}
+
+
+// ----------------------------------
+// Button wrapper
+// ----------------------------------
+
+.button-wrapper {
+  @include flexProperty(column, wrap, center, center);
+  @include width(100%, 650px);
+
+  #{&}__button--green, #{&}__button--blue {
+    @extend .button;
+    width: 90%;
+  }
+
+  #{&}__button--green {
+    background-color: $strong-cyan;
+    box-shadow: 1px 2px 0 darken($strong-cyan, 10%);
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($strong-cyan, 10%);
+    }
+  }
+
+  #{&}__button--blue {
+    background-color: $light-blue;
+    box-shadow: 1px 2px 0 darken($light-blue, 10%);
+    
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($light-blue, 10%);
+    }
+  }
+}  
+
+
+@include media-lg {
+  .button {
+    max-width: 200px;
+  }
+
+  .button + .button {
+    margin-left: 1em;
+  }
+
+
+
+  // ----------------------------------
+  // Header media query lg
+  // ----------------------------------
+
+  .header {
+    #{&}__logo {
+      width: 120px;
+      margin-bottom: 4em;
+    }
+
+    #{&}__title {
+      font-size: 2.2rem;
+      line-height: 0;
+    }
+
+    #{&}__paragraph {
+      margin-bottom: 1em;
+      font-size: 1rem;
+    }
+  }
+
+
+
+  // ----------------------------------
+  // First Section media query lg
+  // ----------------------------------
+  
+  .section1 {
+    padding: 1em 0;
+    margin-bottom: 7em;
+  
+    #{&}__title {
+      font-size: 1.7rem;
+    }
+
+    #{&}__paragraph {
+      font-size: 0.9rem;
+      margin-bottom: 5em;
+    }
+  }
+  
+  // bleum
+  .section1-content {
+    @include flexProperty(row, nowrap, center, center);
+
+    #{&}__image {
+      margin-bottom: 0;
+      width: 65%;
+      margin-left: -350px;
+    }
+  }
+  
+  .section1-inner-content {
+    align-self: center;
+    margin-left: 100px;
+    width: 30%;
+    max-width: 320px;
+
+    #{&}__title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5em;
+    }
+  
+    #{&}__paragraph {
+      margin-bottom: 3em;
+      line-height: 1.5;
+      margin-left: 0;
+      width: 100%;
+    }
+
+    #{&}__title, #{&}__paragraph {
+      text-align: left;
+    }
+  }
+  
+
+
+  // ----------------------------------
+  // Second Section media query lg
+  // ----------------------------------
+
+  .section2 {
+    @include flexProperty(column, nowrap, center, center);
+    margin-bottom: 3em;
+
+    #{&}__title {
+      font-size: 1.7rem;
+    }
+
+    #{&}__paragraph {
+      font-size: 0.9rem;
+      margin-bottom: 4em;
+    }
+
+    #{&}__image {
+      max-width: 810px;
+    }
+  }
+
+
+
+  // ----------------------------------
+  // Third Section media query lg
+  // ----------------------------------
+
+  .section3 {
+    #{&}__title {
+      font-size: 1.7rem;
+      line-height: 0;
+    }
+
+    #{&}__paragraph {
+      font-size: 0.9rem;
+      margin-bottom: 5em;
+    }
+
+    #{&}__content {
+      @include flexProperty(row, nowrap, space-between, start);
+    }
+  }
+
+  .section3-inner-content {
+    @include flexProperty(column, nowrap, center, center);
+    width: 33%;
+    
+    #{&}__image {
+      width: 50px;
+      margin-bottom: 2em;
+    }
+
+    #preview {
+      margin-bottom: 2.7em;
+    }
+  }
+
+
+
+  // ----------------------------------
+  // Fourth Section media query lg
+  // ----------------------------------
+
+  .section4-content {
+    @include flexProperty(row, nowrap, space-between, center);
+
+    #{&}__image {
+      width: 12%;
+    }
+  }
+
+
+
+  // ----------------------------------
+  // Fifth Section media query lg
+  // ----------------------------------
+  .section5 {
+    #{&}__title {
+      font-size: 1.7rem;
+      line-height: 0.5;
+    }
+
+    #{&}__paragraph {
+      font-size: 0.9rem;
+      margin-bottom: 2em;
+    }
+  }
+
+
+  // ----------------------------------
+  // Footer media query lg
+  // ----------------------------------
+  .footer {
+    @include flexProperty(row, nowrap, space-between, start);
+
+    #{&}__logo {
+      width: 65px;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-content {
+    @include flexProperty(column, nowrap, center, space-between);
+
+    #{&}__text {
+      color: lighten($dark-grayish-blue, 10%);
+      margin-bottom: 0; 
+      font-weight: 400;
+      text-align: left;
+      
+      &:hover {
+        cursor: pointer;
+        color: $strong-cyan;
+      }
+    }
+
+    #{&}__text + #{&}__text {
+      margin-top: 1.2em; 
+    }
+  }
+
+  .footer-icon {
+    align-self: center;
+    margin-top: 0;
+
+    #{&}__image {
+      width: 25px;
+
+      &:hover {
+        cursor: pointer;
+        filter: invert(55%) sepia(67%) saturate(368%) hue-rotate(121deg) brightness(90%) contrast(90%);
+      }
+    }
+
+    #{&}__image + #{&}__image {
+      margin-left: 1.5em;
+    }
+  }
+
+
+
+  // ----------------------------------
+  // Button wrapper media query lg
+  // ----------------------------------
+  
+  .button-wrapper {
+    @include flexProperty(row, wrap, center, center);
+  }  
+}

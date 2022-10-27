@@ -1,0 +1,23 @@
+@mixin flexProperty($direction:row, $break:nowrap, $alignWidth:center, $alignHeight:center) {
+  display: flex;
+  flex-flow: $direction $break;
+  justify-content: $alignWidth;
+  align-items: $alignHeight;
+}
+
+@mixin width($width, $max-width) {
+  width: $width;
+  max-width: $max-width;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

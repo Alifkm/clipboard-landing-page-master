@@ -1,0 +1,38 @@
+html, body {
+  font-family: $font-stack;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  color: $dark-grayish-blue;
+}
+
+p {
+  color: $grayish-blue;
+}
+
+button {
+  margin-top: 1.5em;
+}
+
+header {
+  padding: 7em 0;
+  background: url('/images/bg-header-mobile.png') no-repeat top;
+  background-size: cover;
+}
+
+footer {
+  background-color: darken(#FFF, 3%);
+}
+
+
+@include media-lg {
+  header {
+    background-size: 100% 50%;
+    background-color: #FFF;
+  }
+}

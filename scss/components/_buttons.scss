@@ -1,0 +1,14 @@
+.button {
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-family: $font-stack;
+  font-size: 1rem;
+  padding: 0.75em 0;
+}
+
+@include media-lg {
+  .button {
+    font-size: 0.9rem;
+  }
+}
